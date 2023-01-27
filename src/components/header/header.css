@@ -1,9 +1,73 @@
 .header-container {
-    height: auto;
-    border: solid rgb(3, 61, 80) 2px;
+    height: 150px;
+    border: solid lightblue 1px;
+
+
+}
+
+.header-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    height: 100px;
+    width: 140px;
 }
 
 .contact-info-container {
     display: flex;
-    justify-content: flex-end;
+    width: 35%;
+    height: 50%;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(110, 137, 161);
 }
+
+
+/* css of firebase project for header 
+.header-container {
+    height: 50px;
+    background-color: var(--dark-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.home-icon {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.categories-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav-link,
+.auth-link {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.auth-link {
+    background-color: var(--button-bg);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.username {
+    color: var(--white);
+    margin-right: 10px;
+}
+
+*/

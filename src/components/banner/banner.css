@@ -1,0 +1,14 @@
+.banner-container {
+    height: 30vh;
+    border: solid 1px black;
+}
+
+.banner-imgs-container {
+    display: grid;
+    grid-template-columns: 50px 200px 50px;
+    gap: 5px;
+    border: solid lightgrey 2px;
+    height: 100%;
+    background-color: bisque;
+
+}

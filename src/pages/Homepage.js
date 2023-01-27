@@ -1,9 +1,17 @@
 import React from 'react'
+import Banner from '../components/banner/Banner'
 
-function Airplus() {
+function Homepage() {
     return (
-        <div>Airplus</div>
+        <div>
+            <Banner />
+            <div>
+
+                <p>Airplus Homepage</p>
+            </div>
+        </div>
+
     )
 }
 
-export default Airplus
+export default Homepage
