@@ -5,7 +5,7 @@ import { AiOutlinePhone } from 'react-icons/ai'
 import { FiMail } from 'react-icons/fi'
 import NavBar from '../navBar/NavBar'
 
-function Header() {
+function Header({ navCategories }) {
 
 
     return (
@@ -21,7 +21,7 @@ function Header() {
                 </div>
 
             </div>
-            <NavBar />
+            <NavBar navCategories={navCategories} />
 
 
         </div>

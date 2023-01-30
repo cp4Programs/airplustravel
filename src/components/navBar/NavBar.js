@@ -1,15 +1,17 @@
 import React from 'react'
 import './navBar.css'
+import { Link } from 'react-router-dom'
 
-function NavBar() {
+function NavBar({ navCategories }) {
+
+
     return (
         <div className="navbar-container">
-            <p>Home</p>
-            <p>Promotions</p>
-            <p>Booking</p>
-            <p>Destination</p>
-            <p>About</p>
-            <p>Resources</p>
+            {
+                navCategories?.map(item => {
+                    return <Link to={`/${item}`}>{item}</Link>
+                })
+            }
             <button>Log In</button>
         </div>
     )
