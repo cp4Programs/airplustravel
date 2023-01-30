@@ -8,6 +8,7 @@ import Booking from './pages/booking/Booking'
 import About from './pages/about/About'
 import Resources from './pages/resources/Resources'
 import Destinations from './pages/destinations/Destinations';
+import Auth from './pages/auth/Auth';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/Destinations" element={<Destinations />} />
         <Route path="/About" element={<About />} />
         <Route path="/Resources" element={<Resources />} />
+        <Route path="/Auth" element={<Auth />} />
       </Routes>
       <Footer />
     </BrowserRouter>

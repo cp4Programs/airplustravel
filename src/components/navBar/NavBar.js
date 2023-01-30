@@ -1,9 +1,9 @@
 import React from 'react'
 import './navBar.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function NavBar({ navCategories }) {
-
+    let navigate = useNavigate()
 
     return (
         <div className="navbar-container">
@@ -12,7 +12,7 @@ function NavBar({ navCategories }) {
                     return <Link to={`/${item}`}>{item}</Link>
                 })
             }
-            <button>Log In</button>
+            <Link to={`/Auth`}><button>Log In</button></Link>
         </div>
     )
 }
