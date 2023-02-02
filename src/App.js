@@ -12,7 +12,7 @@ import Auth from './pages/auth/Auth';
 
 function App() {
 
-  const navCategories = ["Home", "Promotions", "Booking", "Destinations", "About", "Resources"]
+  const navCategories = ["Home", "Destinations", "Booking", "Promotions", "About", "Resources"]
 
   return (
     <BrowserRouter>

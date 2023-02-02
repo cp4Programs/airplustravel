@@ -10,20 +10,17 @@ function Banner() {
         <div className="banner-container">
             <div className="banner-imgs-container">
                 <div className="thumbnail-photos-lh">
-                    {/* <img className="thumb-img" src={centralEurope} />
-                    <img className="thumb-img" src={dubai} /> */}
+                    <img className="thumb-img" src={centralEurope} />
+                    <img className="thumb-img" src={dubai} />
                 </div>
                 <div className="main-slideshow">
-                    {/* <img className="main-img" src={centralEurope} /> */}
+                    <img className="main-img" src={centralEurope} />
                 </div>
                 <div className="thumbnail-photos-rh">
-                    {/* <img className="thumb-img" src={greece} />
-                    <img className="thumb-img" src={holyland} /> */}
+                    <img className="thumb-img" src={greece} />
+                    <img className="thumb-img" src={holyland} />
                 </div>
             </div>
-
-
-            Banner
         </div>
     )
 }

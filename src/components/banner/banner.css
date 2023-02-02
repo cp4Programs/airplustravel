@@ -1,14 +1,24 @@
 .banner-container {
-    height: 30vh;
-    border: solid 1px black;
+    /* height: 30vh; */
+
 }
 
 .banner-imgs-container {
     display: grid;
-    grid-template-columns: 50px 200px 50px;
+    grid-template-columns: 1.05fr 2.12fr 1.05fr;
     gap: 5px;
     border: solid lightgrey 2px;
-    height: 100%;
-    background-color: bisque;
 
+}
+
+.thumbnail-photos-lh img {
+    width: 100%;
+}
+
+.main-slideshow img {
+    width: 100%;
+}
+
+.thumbnail-photos-rh img {
+    width: 100%;
 }
