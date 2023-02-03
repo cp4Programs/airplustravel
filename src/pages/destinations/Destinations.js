@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import './destinations.css'
 import { db } from '../../config/firebaseConfig'
-import { getDocs, collection } from 'firebase/firestore'
+import { getDocs, collection, Timestamp } from 'firebase/firestore'
 
 function Destinations() {
 
@@ -10,18 +11,43 @@ function Destinations() {
         const docRef = collection(db, "destinations")
         getDocs(docRef)
             .then(res => {
-                console.log(res)
                 const destinations = res.docs.map(item => ({
                     idKey: item.id,
                     ...item.data()
                 }))
-                console.log(destinations)
+                setPage(destinations)
             })
             .catch(err => console.log(err))
     }, [])
-
+    console.log(page)
     return (
-        <div>Destinations</div>
+        <div className="destinations-container">
+            <div className="destination-card-container">
+                {
+
+                    page && page?.map(item => {
+
+                        const departure = new Date(item?.Departure.seconds)
+                        const returnDate = new Date(item?.Return.seconds)
+                        console.log(departure)
+
+                        return <div key={item.idKey} className="destinations-card">
+                            <p>{item?.tour}</p>
+                            <p>{item?.Price}</p>
+                            <p>{item?.tourOption}</p>
+                            <p>{item?.PriceOption}</p>
+                            <p>{item?.Departure.seconds}</p>
+                            <p>{item?.Return.seconds}</p>
+
+
+                        </div>
+
+
+
+                    })
+                }
+            </div>
+        </div>
     )
 }
 
