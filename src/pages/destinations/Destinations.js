@@ -26,24 +26,14 @@ function Destinations() {
                 {
 
                     page && page?.map(item => {
-
-                        const departure = new Date(item?.Departure.seconds)
-                        const returnDate = new Date(item?.Return.seconds)
-                        console.log(departure)
-
                         return <div key={item.idKey} className="destinations-card">
                             <p>{item?.tour}</p>
                             <p>{item?.Price}</p>
                             <p>{item?.tourOption}</p>
                             <p>{item?.PriceOption}</p>
-                            <p>{item?.Departure.seconds}</p>
-                            <p>{item?.Return.seconds}</p>
-
-
+                            <p>{item?.Departure.toDate().toDateString()}</p>
+                            <p>{item?.Return.toDate().toDateString()}</p>
                         </div>
-
-
-
                     })
                 }
             </div>
