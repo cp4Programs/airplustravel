@@ -19,7 +19,7 @@ function Destinations() {
             })
             .catch(err => console.log(err))
     }, [])
-    console.log(page)
+
     return (
         <div className="destinations-container">
             <div className="destination-card-container">
@@ -27,12 +27,28 @@ function Destinations() {
 
                     page && page?.map(item => {
                         return <div key={item.idKey} className="destinations-card">
-                            <p>{item?.tour}</p>
-                            <p>{item?.Price}</p>
-                            <p>{item?.tourOption}</p>
-                            <p>{item?.PriceOption}</p>
-                            <p>{item?.Departure.toDate().toDateString()}</p>
-                            <p>{item?.Return.toDate().toDateString()}</p>
+                            <div className="tour">
+                                <p>{item?.tour}</p>
+                                <p>Price {item?.Price}</p>
+                                <p>{item?.tourOption}</p>
+                                <p>{item?.PriceOption}</p>
+                            </div>
+                            <div className="itinerary">
+                                {
+                                    item?.itinerary?.map(item => {
+
+                                        return <div className="itinerary-days">
+                                            <li>{item}</li>
+                                            <li>{item}</li>
+                                        </div>
+                                    })
+                                }
+                            </div>
+                            <div className="dates">
+                                <p>{item?.Departure.toDate().toDateString()}</p>
+                                <p>{item?.Return.toDate().toDateString()}</p>
+                            </div>
+
                         </div>
                     })
                 }
