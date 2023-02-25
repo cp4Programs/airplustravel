@@ -9,6 +9,7 @@ import About from './pages/about/About'
 import Resources from './pages/resources/Resources'
 import Destinations from './pages/destinations/Destinations';
 import Auth from './pages/auth/Auth';
+import TourDetails from './pages/tourDetails/TourDetails'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Resources" element={<Resources />} />
         <Route path="/Auth" element={<Auth />} />
+        <Route path="/tourDetails/:tourId" element={<TourDetails />} />
       </Routes>
       <Footer />
     </BrowserRouter>

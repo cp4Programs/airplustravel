@@ -1,42 +1,73 @@
-.destinations-container {
+.destinations-container {}
+
+.destination-card-container {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+
 }
 
 .destinations-card {
     border: solid grey 2px;
-    height: 25vh;
-    width: 98%;
-    margin: 4vh auto;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 8px;
-    padding: 2%;
-}
-
-.destination-card-container {
-    width: 95%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.tour {
-    color: rgb(215 39 39 / 81%);
-    font-size: x-large;
-}
-
-.itinerary {
-    color: grey;
-    font-size: large;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.destinations-card {
     height: 50vh;
     width: 50vh;
+    margin: 4vh auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    border-radius: 8px;
+    position: relative;
+
 }
+
+.destinations-card:hover img {
+    opacity: 0.8;
+}
+
+.destinations-card:hover .details {
+    font-weight: 900;
+    align-items: center;
+    font-size: x-large;
+    transition-duration: 0.5s;
+    position: absolute;
+    top: 90px;
+    left: 50px;
+    /* transition: translateY(90px); */
+}
+
+.destinations-card .details {
+    transition: 0.7s
+}
+
+.overlay {
+    background: rgb(4, 2, 34);
+    background: linear-gradient(225deg, rgba(4, 2, 34, 0.47522759103641454) 0%, rgba(37, 37, 40, 0.8771472953216375) 59%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.card-img {
+    vertical-align: bottom;
+    width: 100%;
+    z-index: 0;
+    position: relative;
+    height: 100%;
+
+}
+
+.details {
+    color: #ffffff;
+    font-size: medium;
+    position: absolute;
+    z-index: 2;
+    transition: 0.7s;
+    top: 90px;
+    left: 50px;
+}
+
+
+
+.details:hover {}

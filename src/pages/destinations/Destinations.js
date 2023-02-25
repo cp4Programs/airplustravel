@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './destinations.css'
 import { db } from '../../config/firebaseConfig'
-import { getDocs, collection, Timestamp } from 'firebase/firestore'
+import { getDocs, collection } from 'firebase/firestore'
+import DestinationsCard from './DestinationsCard'
 
 function Destinations() {
 
@@ -20,40 +21,19 @@ function Destinations() {
             .catch(err => console.log(err))
     }, [])
 
+    console.log(page)
+
     return (
         <div className="destinations-container">
             <div className="destination-card-container">
                 {
+                    page && page?.map((item) => {
+                        return <DestinationsCard key={item.idKey} destinations={item} />
 
-                    page && page?.map(item => {
-                        return <div key={item.idKey} className="destinations-card">
-                            <div className="tour">
-                                <p>{item?.tour}</p>
-                                <p>Price {item?.Price}</p>
-                                <p>{item?.tourOption}</p>
-                                <p>{item?.PriceOption}</p>
-                            </div>
-                            <div className="itinerary">
-                                {
-                                    item?.itinerary?.map(item => {
-
-                                        return <div className="itinerary-days">
-                                            <li>{item}</li>
-                                            <li>{item}</li>
-                                        </div>
-                                    })
-                                }
-                            </div>
-                            <div className="dates">
-                                <p>{item?.Departure.toDate().toDateString()}</p>
-                                <p>{item?.Return.toDate().toDateString()}</p>
-                            </div>
-
-                        </div>
                     })
                 }
             </div>
-        </div>
+        </div >
     )
 }
 

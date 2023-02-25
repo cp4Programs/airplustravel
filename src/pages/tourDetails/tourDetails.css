@@ -1,0 +1,57 @@
+.banner-container {
+    display: flex;
+    width: 100%;
+
+}
+
+.banner-lh {
+    width: 60%;
+
+}
+
+.tour-img {
+    width: 100%;
+}
+
+.banner-rh {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.banner-rh h1 {
+    color: rgba(63, 63, 219, 0.789)
+}
+
+.banner-rh p {
+    font-size: x-large;
+    color: rgb(92, 90, 90);
+}
+
+.article {
+    display: flex;
+    width: 100%;
+}
+
+.article-lh {
+    width: 60%;
+}
+
+.article-rh {
+    width: 40%;
+}
+
+.itinerary-container {
+    width: 100%;
+}
+
+.itinerary {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 6px;
+    border-top: solid 1px darkgrey;
+    font-size: larger;
+}

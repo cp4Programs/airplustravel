@@ -1,0 +1,12 @@
+.images-bucket {
+    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.img-style {
+    width: 30vh;
+    height: 25vh;
+    border-radius: 16px;
+}
