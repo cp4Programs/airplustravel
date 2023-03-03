@@ -3,7 +3,6 @@ import { db } from '../../config/firebaseConfig'
 import { doc, getDoc } from 'firebase/firestore'
 import { useParams } from 'react-router-dom'
 import './tourDetails.css'
-
 import Itinerary from './Itinerary'
 
 

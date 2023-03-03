@@ -8,5 +8,21 @@
 .img-style {
     width: 30vh;
     height: 25vh;
-    border-radius: 16px;
+
 }
+
+.option-container {
+    position: relative;
+}
+
+.option-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.img-style:hover {}

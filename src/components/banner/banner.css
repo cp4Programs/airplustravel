@@ -4,7 +4,6 @@
     display: grid;
     grid-template-columns: 1.05fr 2.12fr 1.05fr;
     gap: 5px;
-    border: solid lightgrey 2px;
 
 }
 

@@ -3,7 +3,10 @@ import { FiArrowDown, FiArrowUp } from 'react-icons/fi'
 import './tourDetails.css'
 
 function Itinerary({ itinerary }) {
+    // child of TourDetails.js //
+
     const [more, setMore] = useState(false)
+
     return <div className="itinerary-container">
         {
             !more

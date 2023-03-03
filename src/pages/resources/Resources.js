@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { storage } from '../../config/firebaseConfig'
 import { ref, getDownloadURL, listAll } from 'firebase/storage'
 import './resources.css'
+import ImageOption from './ImageOption'
 
 function Resources() {
 
@@ -23,16 +24,15 @@ function Resources() {
 
     }, [])
 
-    console.log(imagesFolder.slice(1, imagesFolder.length))
-
-
 
     return (
 
         <div className="images-bucket">
             {
                 imagesFolder && imagesFolder?.map(item => {
-                    return <img key={item.idKey} className="img-style" src={item} />
+                    return <ImageOption resourceImage={item} />
+
+
                 })
             }
         </div>
